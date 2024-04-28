@@ -1,0 +1,40 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.75);
+    z-index: 50;
+}
+
+.alert-box{
+    position: relative;
+    top: 50vh;
+    left: 35%;
+    width: 25vw;
+    /* padding: 16px; */
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+    z-index: 100;
+}
+
+.alert-box-actions{
+    text-align: center;
+    padding: 3%;
+}
+.alert-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #337ab7;
+    height: 50px;
+}
+.ok-btn{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    padding: 1%;
+    width: 70px;
+    border-radius: 20px;
+}
