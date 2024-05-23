@@ -6,7 +6,7 @@
     margin-top: 25%;
     width: 100%;
 }
-.loginFullPage{
+/* .loginFullPage{
     margin: 0;
     margin-top: -15px;
     width: 119%;
@@ -16,7 +16,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../../assets/images/bgImage.webp);
-}
+} */
 label{
     color: white;
 }
