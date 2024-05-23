@@ -3,14 +3,14 @@
         <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col-xs-12">
-                    <button class="btn btn-success" type="submit" [disabled]="!recipeForm.valid">Save</button>
-                    <button class="btn btn-danger" type="button" (click)="onCancel()">Cancel</button>
+                    <button class="btn btn-success save-btn" type="submit" [disabled]="!recipeForm.valid">Save</button>
+                    <button class="btn btn-danger cancel-btn" type="button" (click)="onCancel()">Cancel</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name"><b>Name</b></label>
                         <input 
                         type="text" 
                         id="name" 
@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <label for="imagePath">Image URL</label>
+                        <label for="imagePath"><b>Image URL</b></label>
                         <input 
                         type="text" 
                         id="imagePath"
@@ -35,14 +35,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
-                    <img [src]="imagePath.value" class="img-responsive">
+                <div class="col-sm-12">
+                    <img [src]="imagePath.value" class="img-responsive" style="width: 100%;
+                    margin-top: 2%;border-radius: 25px;">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <label for="description">Description</label>
+                        <label for="description"><b>Description</b></label>
                         <textarea 
                         type="text" 
                         id="description" 
@@ -54,40 +55,35 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12" formArrayName="ingredients">
-                    <div class="row" 
+                <div class="col-sm-12" formArrayName="ingredients">
+                    <div class="row col-sm-12" 
                     *ngFor="let ingredientCntrl of getControls();let i = index"
                     [formGroupName]="i" style="margin-top: 10px;">
-                        <div class="col-xs-8">
+                        <div class="col-sm-8">
                             <input 
                             type="text" 
                             class="form-control"
                             formControlName="name"
                             >
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-sm-2">
                             <input 
                             type="number" 
                             class="form-control"
                             formControlName="amount"
                             >
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-sm-2">
                             <button 
                             type="button" class="btn btn-danger"
                             (click)="onDeleteIngredient(i)"> X </button>
                         </div>
                     </div>
                     <hr>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <button type="button" class="btn btn-success" (click)="onAddIngredient()">Add Ingredient</button>
-                        </div>
-                    </div>
-                    
+                    <div class="row col-sm-12" >
+                            <button type="button" class="btn btn-success col-sm-3" (click)="onAddIngredient()" style="position: relative;top: 50%;left: 50%;transform: translate(-50%,-50%);margin-top: 3%;">Add Ingredient</button>
                         
-                       
-                   
+                    </div>
                 </div>
             </div>
             
