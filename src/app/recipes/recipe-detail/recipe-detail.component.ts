@@ -12,6 +12,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class RecipeDetailComponent implements OnInit {
   recipe:Recipe;
   id:number;
+  show:boolean=false;
   constructor(private slService:ShoppingListService,private recipeService:RecipeService,
     private route:ActivatedRoute,
     private router:Router){}
@@ -30,7 +31,10 @@ ngOnInit(): void {
 //     this.slService.addIngredient(ingredient);
 //   })
 // }
-
+manageRecipe(){
+  this.show=!this.show;
+  console.log(this.show);
+}
 ToshoppingList(){
 this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients)
 }
