@@ -1,7 +1,6 @@
-<ng-template appPlaceholder></ng-template>
+<!-- <ng-template appPlaceholder></ng-template> -->
 <div class="row loginFullPage">
-    <div class="col-md-5"></div>
-    <div class="col-xs-12 col-md-5">
+    <div class="col-sm-12 fullform" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
         <!-- <div class="alert alert-danger" *ngIf="error">
             <p>{{error}}</p>
         </div> -->
@@ -20,7 +19,7 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6">
             </div>
-            <div>
+            <div style="margin-top: 5%;">
                 <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">{{ isLoginMode ? 'Login' : 'Sign Up'}}</button>
                  &nbsp; 
                 <button class="btn btn-primary" (click)="onSwitchMode()">Switch to {{ isLoginMode ? 'Sign Up' : 'Login'}}</button>
@@ -28,5 +27,3 @@
         </form>
     </div>
 </div>
-
-
