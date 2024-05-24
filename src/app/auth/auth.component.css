@@ -3,7 +3,6 @@
     padding: 5%;
     border-radius: 25px;
     background: #80808054;
-    margin-top: 25%;
     width: 100%;
 }
 /* .loginFullPage{
@@ -22,4 +21,22 @@ label{
 }
 .form-control{
     background-color: #ccc;
+}
+.fullform{
+    width: 40%;
+}
+@media screen and (min-width: 280px) and (max-width:760px) {
+    .fullform{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:920px) {
+    .fullform{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width:1500px) {
+    .fullform{
+        width: 50%;
+    }
 }
