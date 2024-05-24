@@ -1,0 +1,11 @@
+.add-btn,.clear-btn{
+    margin: 1%;
+}
+@media screen and (min-width: 280px) and (max-width:760px) {
+    .del-btn{
+        margin: 1%;
+    }
+    .btnGroup{
+        margin-top: 2%;
+    }
+}
