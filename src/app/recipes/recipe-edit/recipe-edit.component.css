@@ -4,3 +4,20 @@ input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched{
 .save-btn,.cancel-btn{
     margin: 1%;
 }
+.col-sm-12{
+    width: 100%;
+}
+.col-sm-8{
+    width: 66.66666667%;
+}
+
+.col-sm-2{
+    width: 16.66666667%;
+}
+@media screen and (min-width: 280px) and (max-width:760px) {
+    
+    .amountField{
+        padding: 0px;
+    }
+    
+}
