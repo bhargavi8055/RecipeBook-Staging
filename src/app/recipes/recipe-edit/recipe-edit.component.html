@@ -59,21 +59,21 @@
                     <div class="row col-sm-12" 
                     *ngFor="let ingredientCntrl of getControls();let i = index"
                     [formGroupName]="i" style="margin-top: 10px;">
-                        <div class="col-sm-8">
+                        <div class="col-sm-8 nameField">
                             <input 
                             type="text" 
                             class="form-control"
                             formControlName="name"
                             >
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 amountField">
                             <input 
                             type="number" 
                             class="form-control"
                             formControlName="amount"
                             >
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 cancelField">
                             <button 
                             type="button" class="btn btn-danger"
                             (click)="onDeleteIngredient(i)"> X </button>
@@ -81,7 +81,7 @@
                     </div>
                     <hr>
                     <div class="row col-sm-12" >
-                            <button type="button" class="btn btn-success col-sm-3" (click)="onAddIngredient()" style="position: relative;top: 50%;left: 50%;transform: translate(-50%,-50%);margin-top: 3%;">Add Ingredient</button>
+                            <button type="button" class="btn btn-success col-sm-3 col-md-4 col-lg-3" (click)="onAddIngredient()" style="margin-top: 3%;margin-left: 2%;">Add Ingredient</button>
                         
                     </div>
                 </div>
